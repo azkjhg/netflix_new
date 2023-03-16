@@ -28,7 +28,7 @@ else{
   return (
     <div>
     <DetailMovieCard MovieData={MoviesById && MoviesById}/>
-    ㅇㅇㅇ
+    
     </div>
   )
   }
