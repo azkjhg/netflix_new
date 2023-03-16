@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+.App{
+  /* padding-top: 60px; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.HomeBody{
+  background-color: #131313;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bootNavbar{
+  /* position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 60px !important;
+  z-index: 999 !important; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footerBox{
+  padding-top: 30px;
+  background: #131313;
+}
+
+.bootFooter{
+  margin-top: 20px !important;
+  color: wheat !important;
+}
+
+.nav-item{
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.nav-item:hover{
+  color: red;
+}
+
+.banner{
+  height: 600px;
+  display: flex;
+  align-items: center;
+  background-position: center;
+}
+
+
+.banner::before{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  content: '';
+  background: linear-gradient(to right, black, transparent);
+
+}
+
+.banner-info{
+  width: 40%;
+  margin-left: 100px;
+  z-index: 1;
+  color: white;
+}
+
+
+
+.h1Tittle{
+  font-size: 50px;
+  margin-left: 100px;
+  color: white;
+}
+
+.genreBadge{
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+
+.BootCol{
+  margin: 1px;
+}
+
+/* */
+.slideList{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+
+.MovieCard{
+  transition: all 0.5s ease-out;
+}
+.cardWrapBox{
+  width:350px;
+  height: 200px;
+}
+
+
+.movieTitle{
+  font-size: 30px;
+  opacity: 1 !important;
+}
+.overlay{
+opacity: 0;
+background: rgb(0, 0, 0, 0.3);
+color: white;
+width: 350px;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 1s ease-out;
+}
+
+/**/
+@media (max-width:500px){
+  .banner-info{
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 300px;
+    z-index: 1;
+    color: white;
   }
-  to {
-    transform: rotate(360deg);
+  .h1Tittle{
+    font-size: 35px;
+    margin-left: 20px;
+  }
+  /**/
+
+  .MovieCard{
+    width:350px;
+    height: 200px;
+    transition: all 0.5s ease-out;
+  }
+  .MovieCard:hover{
+    transform: scale(1.05);
+    transition: all 0.1s ease-out;
+  }
+
+  .MovieCard .overlay:hover {
+    opacity: 1;
+  }
+  .MovieCard .overlay:hover {
+    display: none;
   }
 }
+
+.MovieCard .overlay:hover {
+  opacity: 1;
+}
+
+.overlay.show{ 
+  opacity: 1;
+  background: rgb(0, 0, 0, 0.3);
+  color: white;
+  width: 350px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease-out;
+}
+
+.MovieCard.show{
+  width:350px;
+  height: 200px;
+  transition: all 0.5s ease-out;
+  transform: scale(1.05);
+}
+
+/* 영화 디테일 css */
+.movieDetail_mainContainer{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+/* */
