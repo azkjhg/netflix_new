@@ -1,24 +1,32 @@
 import React from 'react'
+import { Badge } from 'react-bootstrap'
+
 
 const DetailMovieCard = ({MovieData}) => {
 
-    const imgUrl = `https://www.themoviedb.org/t/p/w300_and_h450_bestv2${MovieData && MovieData.poster_path}`
-
+    const imgUrl = `https://image.tmdb.org/t/p/original//${MovieData && MovieData.poster_path}`
+    console.log(MovieData)
   return (
-    <div>
+    <div className="movieDetailCard">
 
 <div className='movieDetail_mainContainer'>
-        <div>
-          <img src={imgUrl} alt={"영화 포스터"} />
+        <div >
+          <img src={imgUrl} alt={"영화 포스터"} className='movieDetail_img' />
         </div>
         <div className='movieDetail_textContainer'>
-          <div>영화 제목{MovieData?.title}</div>
-          <div>장르</div>
-          <div>영화 인기도</div>
-          <div>영화 줄거리</div>
-          <div>예산</div>
-          <div>개봉일</div>
-          <div>이페이지는 현재 제작중입니다</div>
+        <div className='movieDetail_genre'>{MovieData?.genres.map((item)=><Badge key={item.id} pill bg="danger" className='genreBadge'>
+                {item.name}
+              </Badge>)}</div>
+          
+          <div className='movieDetail_title'>{MovieData?.title}</div>
+          
+          
+          
+          <div>{MovieData?.popularity}</div>
+          <div className='movieDetail_overview'>{MovieData?.overview}</div>
+          <div>평점 {MovieData?.vote_average.toFixed(1)}</div>
+          <div>Release Day {MovieData?.release_date}</div>
+
         </div>
       </div>
 

@@ -30,7 +30,7 @@ const MovieCard = ({eachArray}) => {
     const showDetail =() => {
         navigate(`/movies/${eachArray.id}`)
       }
-
+    console.log(eachArray)
     return (
     <div className='MovieCard' style={style} onClick={showDetail}>
       <div className='cardWrapBox'>

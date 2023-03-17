@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import ClipLoader from "react-spinners/ClipLoader";
 import DetailMovieCard from '../components/DetailMovieCard'
 
+
+
 const MovieDetail = () => {
   const {id} = useParams()
   const dispatch = useDispatch()
@@ -26,8 +28,10 @@ if(detailLoading){
 />)}
 else{
   return (
-    <div>
-    <DetailMovieCard MovieData={MoviesById && MoviesById}/>
+
+
+    <div className='movieDetailMain'>
+    <DetailMovieCard  MovieData={MoviesById && MoviesById}/>
     
     </div>
   )
