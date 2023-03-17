@@ -5,36 +5,68 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../images/logo.png'
 import {Link} from 'react-router-dom'
-
+import React, { useState } from 'react';
+import {
+  MDBContainer,
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarToggler,
+  MDBIcon,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarLink,
+  MDBBtn,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem,
+  MDBCollapse,
+} from 'mdb-react-ui-kit';
 
 
 function Navigation() {
+
+  const [showBasic, setShowBasic] = useState(false);
   return (
-    <Navbar sticky='top' bg="dark" variant="dark" expand="lg">
-      <Container fluid>
-        <Navbar.Brand href="#"><img src={logo} width={100}alt="logo"></img></Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Link to="/" className='nav-item'>Home</Link>
-            <Link to="/movies"  className='nav-item'>Movies</Link>
-          </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="danger">Search</Button>
-          </Form>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+
+    
+
+    <MDBNavbar expand='lg' light bgColor='dark'>
+      <MDBContainer fluid>
+        <MDBNavbarBrand href='#'><img src={logo} width={100}alt="logo"></img></MDBNavbarBrand>
+
+        <MDBNavbarToggler
+          aria-controls='navbarSupportedContent'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+          onClick={() => setShowBasic(!showBasic)}
+        >
+          <MDBIcon icon='bars' fas />
+        </MDBNavbarToggler>
+
+        <MDBCollapse navbar show={showBasic}>
+          <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
+            <MDBNavbarItem>
+              
+              <Link to="/" className='nav-item'>Home</Link>
+
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+                 <Link to="/movies"  className='nav-item'>Movies</Link>
+
+              
+         
+
+            </MDBNavbarItem>
+          </MDBNavbarNav>
+
+          <form className='d-flex input-group w-auto'>
+            <input type='search' className='form-control' placeholder='Search' aria-label='Search' />
+            <MDBBtn color='danger'>Search</MDBBtn>
+          </form>
+        </MDBCollapse>
+      </MDBContainer>
+    </MDBNavbar>
   );
 }
 

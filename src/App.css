@@ -1,28 +1,11 @@
-.App{
-  /* padding-top: 60px; */
-}
-
 .HomeBody{
   background-color: #131313;
   color: white;
 }
 
-.bootNavbar{
-  /* position: fixed !important;
-  top: 0 !important;
-  width: 100% !important;
-  height: 60px !important;
-  z-index: 999 !important; */
-}
-
 .footerBox{
   padding-top: 30px;
   background: #131313;
-}
-
-.bootFooter{
-  margin-top: 20px !important;
-  color: wheat !important;
 }
 
 .nav-item{
@@ -174,4 +157,44 @@ transition: all 1s ease-out;
   justify-content: center;
   gap: 10px;
 }
+
+.movieDetail_textContainer{
+  width: 600px;
+}
 /* */
+
+.movieDetailMain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #131313;
+  color: white;
+}
+.movieDetail_img{
+  width: 540px;
+  height: 810px;
+}
+.movieDetail_textContainer{
+  margin: 0 10px 0 10px;
+}
+
+.movieDetail_title{
+  font-size: 65px;
+}
+.movieDetail_genre{
+  font-size: 24px;
+}
+.movieDetail_overview{
+  font-size: 18px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin: 20px 0 20px 0;
+  padding: 20px 0 20px 0;
+}
+
+.movieDetailCard{
+
+}
+
+
+
