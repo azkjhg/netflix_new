@@ -53,7 +53,7 @@ const DetailMovieCard = ({MovieData}) => {
             <div className='movieDetail_badge_container'><div className='movieDetail_badge'>Budget</div>${MovieData?.budget}</div>
             <div className='movieDetail_badge_container'><div className='movieDetail_badge'>revenue</div>${MovieData?.revenue}</div>
             <div className='movieDetail_badge_container'><div className='movieDetail_badge'>release</div> {MovieData?.release_date}</div>
-            <div className='movieDetail_badge_container'><div className='movieDetail_badge'>런타임</div>{MovieData?.runtime}</div>
+            <div className='movieDetail_badge_container'><div className='movieDetail_badge'>runtime</div>{MovieData?.runtime}</div>
           </div>
 
         </div>
