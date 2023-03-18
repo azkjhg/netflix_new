@@ -1,11 +1,11 @@
 .HomeBody{
-  background-color: #131313;
+  background-color: #000000;
   color: white;
 }
 
 .footerBox{
   padding-top: 30px;
-  background: #131313;
+  background: #000000;
 }
 
 .nav-item{
@@ -48,11 +48,6 @@
   font-size: 50px;
   margin-left: 100px;
   color: white;
-}
-
-.genreBadge{
-  margin-right: 5px;
-  margin-bottom: 3px;
 }
 
 .BootCol{
@@ -152,6 +147,9 @@ transition: all 1s ease-out;
 }
 
 /* 영화 디테일 css */
+.movieDetailCard{
+  background-color: #000000;
+}
 .movieDetail_mainContainer{
   display: flex;
   justify-content: center;
@@ -167,7 +165,7 @@ transition: all 1s ease-out;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #131313;
+  background-color: #000000;
   color: white;
 }
 .movieDetail_img{
@@ -175,7 +173,7 @@ transition: all 1s ease-out;
   height: 810px;
 }
 .movieDetail_textContainer{
-  margin: 0 10px 0 10px;
+  margin: 0 0 0 50px;
 }
 
 .movieDetail_title{
@@ -183,18 +181,73 @@ transition: all 1s ease-out;
 }
 .movieDetail_genre{
   font-size: 24px;
+  display: flex;
+  gap: 10px;
 }
+
+.movieDetail_genre_badge{
+  margin-right: 5px;
+  margin-bottom: 3px;
+
+  background-color: #DC143C;
+  width: auto;
+  padding: 5px 10px 5px 10px;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
 .movieDetail_overview{
   font-size: 18px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  margin: 20px 0 20px 0;
-  padding: 20px 0 20px 0;
+  margin: 30px 0 30px 0;
+  padding: 30px 0 30px 0;
 }
 
-.movieDetailCard{
-
+.movieDetail_tagline{
+  font-size: 24px;
+  margin-bottom: 20px;
 }
+.movieDetail_detailScores{
+  font-size: 20px;
+  display: flex;
+  gap: 40px;
+}
+.movieDetail_users{
+  margin-right: 10px;
+  color: #778899;
+}
+
+.movieDetail_average{
+  margin-right: 10px;
+  color: #F6CA2A;
+}
+.movieDetail_average_10{
+  color: gray;
+}
+
+.movieDetail_badge{
+  background-color: #DC143C;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.movieDetail_badge_container{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.movieDetail_detailText{
+  border-bottom: 1px solid white;
+  padding-bottom: 30px;
+}
+
 
 
 
