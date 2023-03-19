@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Reviews = ({ReviewData}) => {
+const Reviews = ({toggle, ReviewData}) => {
   return (
-    <div className='review_mainContainer'>
+    <div className={toggle === "reviews" ? "review_mainContainer" : "review_mainContainer unActive"} >
         <div className='review_title'>Reviews</div>
         
     <div>

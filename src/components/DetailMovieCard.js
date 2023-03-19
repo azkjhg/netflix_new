@@ -17,7 +17,7 @@ const theme = createTheme({
 const DetailMovieCard = ({MovieData}) => {
 
     const imgUrl = `https://image.tmdb.org/t/p/original//${MovieData && MovieData.poster_path}`
-    console.log(MovieData)
+ 
   return (
     <div className="movieDetailCard">
 

@@ -4,7 +4,7 @@ import api from "../api"
 const API_KEY = process.env.REACT_APP_API_KEY
 function getMovies(fuck){
     return async (dispatch) =>{
-        try{console.log("디스패치가 뭔데 씹덕아", dispatch , "뻑", fuck)
+        try{
                //데이터 도착 전
             dispatch({type:"GET_MOVIES_REQUEST"})
             const popularApi = api.get(`/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)

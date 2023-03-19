@@ -1,10 +1,10 @@
 import React from 'react'
 import MovieCard from './MovieCard'
 
-const Recommend = ({RecommendData}) => {
+const Recommend = ({toggle, RecommendData}) => {
   return (
-    <div className='Recommend_mainContainer'>
-        {console.log("레코",RecommendData)}
+    <div className={toggle === "Recommend" ? "Recommend_mainContainer" : "Recommend_mainContainer unActive"} >
+
       {RecommendData && RecommendData.results.map((item, index)=>
            <MovieCard key={index} eachArray={item}/>)}
     </div>

@@ -26,10 +26,10 @@ useEffect(() => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           console.log('Target is visible!');
-          console.log(entry)
+       
           entry.target.className ='overlay show'
           // targetRef.current.className = "overlay show"
-          console.log("클래스 바꾸는 일 했냐")       
+ 
         }
         else if (!entry.isIntersecting){
           console.log('Target is invisible!');
@@ -42,10 +42,10 @@ useEffect(() => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           console.log('Target is visible!');
-          console.log(entry)
+   
           entry.target.className ='MovieCard show'
           // targetRef.current.className = "overlay show"
-          console.log("클래스 바꾸는 일 했냐")       
+
         }
         else if (!entry.isIntersecting){
           console.log('Target is invisible!');
@@ -67,8 +67,8 @@ useEffect(() => {
       observer2.observe(targetTag2[i]);
     }
 
-    console.log(targetTag)
-    console.log("관찰자 지정 일 했냐")
+
+
 
     // cleanup 함수
     return () => {
