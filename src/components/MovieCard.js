@@ -37,7 +37,7 @@ const MovieCard = ({eachArray}) => {
         <div className='overlay'>
           <div>
           <h1 className='movieTitle'>{eachArray.title}</h1>
-            <div>{eachArray.genre_ids.map(id=>
+            <div className='badge_container'>{eachArray.genre_ids.map(id=>
                 <Badge key={id} bg="danger" className='genreBadge'>
                 {genreList.genres.find( item => item.id === id).name}
               </Badge>

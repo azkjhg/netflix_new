@@ -43,17 +43,23 @@ function getMoviesById(id){
 
             const genreApi = api.get(`/genre/movie/list?api_key=${API_KEY}&language=en-US`)
 
-            let [MoviesById, genreList ] = await Promise.all([MovieByIdApi, genreApi ])
+            const MovieReviewApi = api.get(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${API_KEY}&language=en-US&page=1`)
+
+            const MovieRecommendApi = api.get(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${API_KEY}&language=en-US&page=1`)
+
+            let [MoviesById, genreList, MovieReview, MovieRecommend] = await Promise.all([MovieByIdApi, genreApi, MovieReviewApi, MovieRecommendApi])
         // 데이터 도착
        
         dispatch({
             type: "GET_MOVIES_SUCCESS", payload: {MoviesById: MoviesById.data
-            , genreList: genreList.data
+            , genreList: genreList.data,
+            MovieReview: MovieReview.data,
+            MovieRecommend: MovieRecommend.data
             }
         })
         }catch(error){
             //에러 핸들링 하는 곳
-            console.log("에러",error)
+            console.log("catch 에러",error)
             dispatch({type:"GET_MOVIES_FAILURE"})
         }
            

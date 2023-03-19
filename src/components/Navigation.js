@@ -33,7 +33,7 @@ function Navigation() {
 
     <MDBNavbar expand='lg' light bgColor='dark'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#'><img src={logo} width={100}alt="logo"></img></MDBNavbarBrand>
+        <MDBNavbarBrand href='/'><img src={logo} width={100}alt="logo"></img></MDBNavbarBrand>
 
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'

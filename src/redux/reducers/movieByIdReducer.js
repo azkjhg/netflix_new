@@ -1,6 +1,8 @@
 let initialize = {
     MoviesById:{},
     genreList: {},
+    MovieReview: {},
+    MovieRecommend: {},
     detailLoading: true
 
 }
@@ -10,13 +12,15 @@ function movieByIdReducer(state=initialize,action){
     switch(type){
         case "GET_MOVIES_REQUEST" :
             return {
-            ...state
+            ...state, detailLoading: true
             }
         case "GET_MOVIES_SUCCESS" :
             return {
                 ...state, 
                 MoviesById: payload.MoviesById,
                 genreList: payload.genreList,
+                MovieReview: payload.MovieReview,
+                MovieRecommend: payload.MovieRecommend,
                 detailLoading: false
             }
         case "GET_MOVIES_FAILURE" :
