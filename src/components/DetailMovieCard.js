@@ -22,7 +22,7 @@ const DetailMovieCard = ({MovieData}) => {
     <div className="movieDetailCard">
 
 <div className='movieDetail_mainContainer'>
-        <div >
+        <div className='movieDetail_imgContainer'>
           <img src={imgUrl} alt={"영화 포스터"} className='movieDetail_img' />
         </div>
         <div className='movieDetail_textContainer'>

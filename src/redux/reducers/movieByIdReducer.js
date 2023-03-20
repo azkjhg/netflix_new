@@ -3,6 +3,7 @@ let initialize = {
     genreList: {},
     MovieReview: {},
     MovieRecommend: {},
+    MoviePreview:{},
     detailLoading: true
 
 }
@@ -21,6 +22,7 @@ function movieByIdReducer(state=initialize,action){
                 genreList: payload.genreList,
                 MovieReview: payload.MovieReview,
                 MovieRecommend: payload.MovieRecommend,
+                MoviePreview: payload.MoviePreview,
                 detailLoading: false
             }
         case "GET_MOVIES_FAILURE" :

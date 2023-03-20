@@ -46,15 +46,18 @@ function getMoviesById(id){
             const MovieReviewApi = api.get(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${API_KEY}&language=en-US&page=1`)
 
             const MovieRecommendApi = api.get(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${API_KEY}&language=en-US&page=1`)
+            
+            const MoviePreviewApi = api.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US`)
 
-            let [MoviesById, genreList, MovieReview, MovieRecommend] = await Promise.all([MovieByIdApi, genreApi, MovieReviewApi, MovieRecommendApi])
+            let [MoviesById, genreList, MovieReview, MovieRecommend, MoviePreview] = await Promise.all([MovieByIdApi, genreApi, MovieReviewApi, MovieRecommendApi, MoviePreviewApi])
         // 데이터 도착
        
         dispatch({
             type: "GET_MOVIES_SUCCESS", payload: {MoviesById: MoviesById.data
             , genreList: genreList.data,
             MovieReview: MovieReview.data,
-            MovieRecommend: MovieRecommend.data
+            MovieRecommend: MovieRecommend.data,
+            MoviePreview: MoviePreview.data
             }
         })
         }catch(error){
