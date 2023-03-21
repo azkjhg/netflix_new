@@ -4,7 +4,7 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import '@fontsource/roboto/300.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import ModalContainer from './ModalContainer';
 
 const theme = createTheme({
   palette: {
@@ -14,7 +14,7 @@ const theme = createTheme({
     },
   },
 });
-const DetailMovieCard = ({MovieData}) => {
+const DetailMovieCard = ({MovieData, MoviePreview}) => {
 
     const imgUrl = `https://image.tmdb.org/t/p/original//${MovieData && MovieData.poster_path}`
  
@@ -55,6 +55,8 @@ const DetailMovieCard = ({MovieData}) => {
             <div className='movieDetail_badge_container'><div className='movieDetail_badge'>release</div> {MovieData?.release_date}</div>
             <div className='movieDetail_badge_container'><div className='movieDetail_badge'>runtime</div>{MovieData?.runtime}</div>
           </div>
+          <ModalContainer PreviewData={MoviePreview && MoviePreview} />
+      <div className='movieDetail_bottom'></div>
 
         </div>
       </div>

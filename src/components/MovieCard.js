@@ -2,9 +2,9 @@ import React from 'react'
 import { Badge } from 'react-bootstrap'
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-
-const MovieCard = ({eachArray}) => {
+const MovieCard = ({eachArray, setToggle}) => {
     const eachUrl = eachArray.backdrop_path
   const style = {
     backgroundImage: `url(https://www.themoviedb.org/t/p/w355_and_h200_multi_faces${eachUrl})`
@@ -26,8 +26,9 @@ const MovieCard = ({eachArray}) => {
       bgColor = "danger"
     }
 
-    const navigate = useNavigate()  
+    const navigate = useNavigate()
     const showDetail =() => {
+      setToggle && setToggle("reviews")
         navigate(`/movies/${eachArray.id}`)
       }
 

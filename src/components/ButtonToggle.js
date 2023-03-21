@@ -8,7 +8,6 @@ export default function ButtonToggle({toggle, setToggle}) {
     }
   };
 
-
   return (
     <div className="Toggle_Container">
       <div className={toggle === "reviews" ? "Toggle_Reviews Toggle_active" :"Toggle_Reviews"} onClick={()=> ToggleChange("reviews")}>Reviews</div>

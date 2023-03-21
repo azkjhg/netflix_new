@@ -7,7 +7,7 @@ const ModalContainer = ({PreviewData}) => {
   console.log(PreviewData, "스텝백")
   return (
     <div>
-      <button onClick={() => setIsOpen(!isOpen)}>Watch Trailer</button>
+      <button className='Modal_Trailer' onClick={() => setIsOpen(!isOpen)}>Watch Trailer</button>
 
         {!isOpen ? "" : <Preview isOpen={isOpen} setIsOpen={setIsOpen} PreviewData={PreviewData && PreviewData}/>}
     </div>
