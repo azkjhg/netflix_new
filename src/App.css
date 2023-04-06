@@ -385,6 +385,8 @@ transition: all 1s ease-out;
 .movieDetail_textContainer{
   width: 100vw;
   height: auto;
+  margin: 0;
+  padding: 10px;
 }
 .movieDetail_overview{
   width: 90vw;
@@ -408,11 +410,13 @@ transition: all 1s ease-out;
 .Recommend_mainContainer{
   width: 100vw;
 }
+.review_mainContainer{
+  width: 100vw;
+}
 .preview_container{
   margin: 0;
   padding: 0;
 }
-
 .preview_modalButton{
   margin: auto;
 }
