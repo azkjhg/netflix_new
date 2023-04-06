@@ -13,7 +13,6 @@ export default class Preview extends React.Component {
         autoplay: 1,
       },
     };
-    console.log(PreviewData, "네가 비빌 곳이")
     let movieKey = PreviewData?.results[0].key
     return <div className='preview_container'>
                 <div className='preview_modalContainer'>
