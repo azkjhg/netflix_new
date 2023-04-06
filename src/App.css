@@ -416,4 +416,10 @@ transition: all 1s ease-out;
 .preview_modalButton{
   margin: auto;
 }
+.movieDetail_title, .movieDetail_genre, .movieDetail_detailScores{
+  width: 90vw;
+}
+.movieDetail_tagline{
+  width: 90vw;
+}
 }
